@@ -1,13 +1,15 @@
 using BApp.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-
+using MusicLibrary.Domain.Entities;
 namespace BApp.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public DbSet<Song> Songs { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Artist> Artists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
