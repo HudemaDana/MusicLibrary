@@ -1,7 +1,7 @@
-using BApp.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using MusicLibrary.Domain.Entities;
-namespace BApp.DataAccess.Data
+
+namespace MusicLibrary.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {

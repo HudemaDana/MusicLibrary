@@ -8,5 +8,7 @@ public class Song : BaseEntity
     [RegularExpression(@"^\d+:\d+$", ErrorMessage = "Length must be in the format number:number.")]
     public string Length { get; set; }
 
+    public int AlbumId { get; set; }
+
     public Album Album { get; set; }
 }
